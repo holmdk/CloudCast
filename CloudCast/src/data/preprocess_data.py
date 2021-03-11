@@ -12,9 +12,8 @@ def pre_process_data(vals, nan_to_zero, normalize, restrict_classes_to_4, fill_v
     vals[vals==2] = fill_value # Cloud-free sea
     vals[vals==3] = fill_value # snow over land
     vals[vals==4] = fill_value # sea ice
-    # vals[vals>250] = fill_value
 
-    vals[vals>230] = fill_value
+    vals[vals>230] = fill_value  # these should not be included
 
     if nan_to_zero:
         if np.isnan(fill_value):

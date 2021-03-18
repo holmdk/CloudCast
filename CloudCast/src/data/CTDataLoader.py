@@ -5,7 +5,7 @@ Data loading object
 # Based upon https://github.com/weixiong-ur/mdgan/blob/master/video_folder_test.py
 
 from torch.utils.data import Dataset
-from CloudCast.src.data.preprocess_data import pre_process_data
+from src.data.preprocess_data import pre_process_data
 import xarray as xr
 import torch
 import numpy as np

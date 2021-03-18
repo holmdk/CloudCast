@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from torch.autograd import Variable
 
-from CloudCast.src.utils.one_hot_encoder import make_one_hot
+from src.utils.one_hot_encoder import make_one_hot
 import torch.nn.functional as F
 
 # from convlstm.src.utils.LayerNorm import LayerNorm
@@ -90,7 +90,7 @@ class up(nn.Module):
         return x
 
 class DeepAutoencoderConvLSTM(nn.Module):
-    def __init__(self, nf, in_chan, input_size=(16, 16), n_classes=4):
+    def __init__(self, nf=64, in_chan=1, input_size=(16, 16), n_classes=4):
 
         super(DeepAutoencoderConvLSTM, self).__init__()
 
